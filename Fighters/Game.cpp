@@ -41,7 +41,7 @@ void Game::run() {
         while (time > Time) {
             time -= Time;
             processEvents();
-            if (!player.GameOver) update(Time);
+            if (!player.GameOver && !boss.WIN) update(Time);
         }
         render();
     }
