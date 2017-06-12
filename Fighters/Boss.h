@@ -12,7 +12,7 @@
 #include "Sprite.h"
 #include "Shot.h"
 #include "Player.h"
-#define timeInterval 2000
+#define timeInterval 1000
 #define numOfBossShots 10
 
 class Boss: public Sprite {

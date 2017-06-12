@@ -15,7 +15,8 @@ Player::Player() {
     rect = texture.getSize();
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, windowHeight - rect.y - 10);
-    speed = 250;
+    speed = 200;
+    damage = 1;
     aliveCondition = 1;
     moveUp = 0;
     moveRight = 0;
@@ -36,6 +37,8 @@ void Player::reStart() {
     moveLeft = 0;
     moveDown = 0;
     life = 3;
+    speed = 200;
+    damage = 1;
     GameOver = 0;
     for (int i = 0; i < numOfShots; i++) shots[i].isAlive = 0;
 }

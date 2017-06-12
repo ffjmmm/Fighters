@@ -12,6 +12,7 @@
 #include "Sprite.h"
 #include "Shot.h"
 #include <SFML/Audio.hpp>
+#include "Menu.h"
 #define numOfShots 20
 
 class Player: public Sprite {
@@ -20,11 +21,13 @@ private:
     sf::SoundBuffer shotBuffer;
     sf::Sound shotSound;
 public:
+    int damage;
     int life;
     sf::Sprite Plane;
     int aliveCondition;
     Shot shots[numOfShots];
     Player();
+    Menu menu;
     bool GameOver;
     void setMove(sf::Keyboard::Key key, bool isPressed);
     void move(sf::Time time);

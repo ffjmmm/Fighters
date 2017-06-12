@@ -23,6 +23,8 @@ Game::Game() {
     enemyDownSound.setBuffer(enemyDownBuffer);
     playerDownBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/player_down.wav");
     playerDownSound.setBuffer(playerDownBuffer);
+    pause = 0;
+    timee = 1;
 }
 
 void Game::run() {
@@ -35,13 +37,13 @@ void Game::run() {
     while (mWindow.isOpen()) {
         processEvents();
         dTime = clock.getElapsedTime();
-        gameTime += dTime;
-        if (boss.bossTime) bossTime += dTime;
+        if (!pause) gameTime += dTime;
+        if (boss.bossTime && !pause) bossTime += dTime;
         time += clock.restart();
         while (time > Time) {
             time -= Time;
             processEvents();
-            if (!player.GameOver && !boss.WIN) update(Time);
+            if (!player.GameOver && !boss.WIN && !pause) update(Time);
         }
         render();
     }
@@ -66,8 +68,13 @@ void Game::processEvents() {
 void Game::update(sf::Time time) {
     player.move(time);
     background.move(time);
+    if (reward.alive) reward.move(time);
     if (!boss.bossComing) {
         enemy.creatEnemy(gameTime);
+        if (gameTime.asMilliseconds() > rewardTimeInterval * timee) {
+            timee ++;
+            reward.setKind();
+        }
     }
     enemy.shoot(gameTime);
     enemy.move(time);
@@ -94,6 +101,14 @@ void Game::update(sf::Time time) {
 
 void Game::render() {
     mWindow.clear();
+    if (pause) {
+        player.menu.setData(player.damage, player.speed, player.life);
+        mWindow.draw(player.menu.getDamageText());
+        mWindow.draw(player.menu.getSpeedText());
+        mWindow.draw(player.menu.getLifeText());
+        mWindow.display();
+        return;
+    }
     if (player.GameOver) {
         gameMusic.stop();
         gameOverMusic.play();
@@ -128,6 +143,7 @@ void Game::render() {
     mWindow.draw(background.background[1]);
     mWindow.draw(score.score);
     if (player.aliveCondition) mWindow.draw(player.Plane);
+    if (reward.alive) mWindow.draw(reward.reward);
     for (int i = 0; i < numOfShots; i++) {
         if (player.shots[i].isAlive) {
             mWindow.draw(player.shots[i].shot);
@@ -165,6 +181,8 @@ void Game::reStart() {
     player.reStart();
     enemy.reStart();
     boss.reStart();
+    gameMusic.play();
+    timee = 1;
 }
 
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed) {
@@ -178,6 +196,9 @@ void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed) {
         if (player.GameOver || boss.WIN) {
             reStart();
         }
+    }
+    if (key == sf::Keyboard::Tab) {
+        pause = isPressed;
     }
 }
 
@@ -197,11 +218,14 @@ void Game::checkCrash() {
             sf::Vector2f posEnemy = enemy.enemys[i].enemyPlane.getPosition();
             sf::Vector2f posShot = player.shots[j].shot.getPosition();
             if (isCollsion(posEnemy.x, posEnemy.y, enemy.enemys[i].rect.x, enemy.enemys[i].rect.y, posShot.x, posShot.y, player.shots[j].rect.x, player.shots[j].rect.y)) {
-                enemy.enemys[i].down(1);
+                enemy.enemys[i].HP -= player.damage;
+                if (enemy.enemys[i].HP <= 0) {
+                    enemy.enemys[i].down(1);
+                    enemyDownSound.play();
+                    score.updateScore(10);
+                }
                 player.shots[j].isAlive = 0;
-                enemyDownSound.play();
-                score.updateScore(10);
-                if (score.getScore() > 100) {
+                if (score.getScore() > 200) {
                     boss.bossComing = 1;
                 }
                 break;
@@ -215,14 +239,25 @@ void Game::checkCrash() {
                 sf::Vector2f posBoss = boss.Plane.getPosition();
                 sf::Vector2f posShot = player.shots[i].shot.getPosition();
                 if (isCollsion(posBoss.x, posBoss.y, boss.rect.x, boss.rect.y, posShot.x, posShot.y, player.shots[i].rect.x, player.shots[i].rect.y)) {
-                    boss.HP --;
-                    if (boss.HP == 0) {
+                    boss.HP -= player.damage;
+                    if (boss.HP <= 0) {
                         boss.down(1);
                     }
                     player.shots[i].isAlive = 0;
                     break;
                 }
             }
+        }
+    }
+    if (player.aliveCondition != 1) return;
+    if (reward.alive) {
+        sf::Vector2f posPlayer = player.Plane.getPosition();
+        sf::Vector2f posReward = reward.reward.getPosition();
+        if (isCollsion(posPlayer.x, posPlayer.y, player.rect.x, player.rect.y, posReward.x, posReward.y, reward.rect.x, reward.rect.y)) {
+            reward.alive = 0;
+            if (reward.getKind() == 0) player.damage ++;
+            if (reward.getKind() == 1) player.life ++;
+            if (reward.getKind() == 2) player.speed += 50;
         }
     }
     if (player.aliveCondition != 1) return;
@@ -264,10 +299,12 @@ void Game::checkCrash() {
         }
     }
     if (player.aliveCondition != 1) return;
-    sf::Vector2f posBoss = boss.Plane.getPosition();
-    sf::Vector2f posPlayer = player.Plane.getPosition();
-    if (isCollsion(posPlayer.x, posPlayer.y, player.rect.x, player.rect.y, posBoss.x, posBoss.y, boss.rect.x, boss.rect.y)) {
-        playerDownSound.play();
-        player.down(1);
+    if (boss.bossTime) {
+        sf::Vector2f posBoss = boss.Plane.getPosition();
+        sf::Vector2f posPlayer = player.Plane.getPosition();
+        if (isCollsion(posPlayer.x, posPlayer.y, player.rect.x, player.rect.y, posBoss.x, posBoss.y, boss.rect.x, boss.rect.y)) {
+            playerDownSound.play();
+            player.down(1);
+        }
     }
 }

@@ -18,6 +18,7 @@ private:
     bool isShoot;
     int key;
 public:
+    int HP;
     sf::Sprite enemyPlane;
     Enemy();
     void move(sf::Time time);

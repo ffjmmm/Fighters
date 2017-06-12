@@ -16,7 +16,9 @@
 #include "Score.h"
 #include "Heart.h"
 #include "Boss.h"
+#include "Reward.h"
 #include "Background.h"
+#define rewardTimeInterval 8000
 
 class Game {
 private:
@@ -36,6 +38,9 @@ private:
     Heart heart;
     Boss boss;
     Background background;
+    Reward reward;
+    int timee;
+    bool pause;
     void processEvents();
     void update(sf::Time time);
     void render();

@@ -18,7 +18,7 @@ Boss::Boss() {
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, 0);
     speed = 150;
-    HP = 20;
+    HP = 40;
     aliveCondition = 1;
     stay = 0;
     bossTime = 0;
@@ -34,7 +34,7 @@ void Boss::reStart() {
     rect = texture.getSize();
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, 0);
-    HP = 20;
+    HP = 40;
     aliveCondition = 1;
     stay = 0;
     WIN = 0;
@@ -109,13 +109,13 @@ void Boss::shoot(sf::Time time, Player player) {
 
 void Boss::down(int k) {
     int t = 7;
-    if (k == 6*t + 7) {
+    if (k == 6*t + 15) {
         bossTime = 0;
         bossComing = 0;
         WIN = 1;
         return;
     }
-    if (k % t == 1) {
+    if (k % t == 1 && k/t < 6) {
         texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/boss_down" + to_string(k/t+1) + ".png");
         Plane.setTexture(texture);
         rect = texture.getSize();

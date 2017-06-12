@@ -24,6 +24,8 @@
 		142924FC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
 		142924FD1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
 		149720171EEEAC0E00CF0321 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149720161EEEAC0E00CF0321 /* Background.cpp */; };
+		1497201C1EEEBF0800CF0321 /* Menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1497201B1EEEBF0800CF0321 /* Menu.cpp */; };
+		149720221EEEDAAB00CF0321 /* Reward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149720211EEEDAAB00CF0321 /* Reward.cpp */; };
 		14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B2E81ED3C2D2000ED50B /* Score.cpp */; };
 		14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B1A91EE63DE500ED2639 /* Boss.cpp */; };
 		14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F563DC1ECA85E9002BB1E0 /* Shot.cpp */; };
@@ -68,6 +70,13 @@
 		149720161EEEAC0E00CF0321 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
 		149720181EEEAD4800CF0321 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
 		149720191EEEB5AC00CF0321 /* background_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_long.png; path = Resources/background_long.png; sourceTree = "<group>"; };
+		1497201A1EEEBEFD00CF0321 /* Menu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Menu.h; sourceTree = "<group>"; };
+		1497201B1EEEBF0800CF0321 /* Menu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Menu.cpp; sourceTree = "<group>"; };
+		1497201D1EEEDA8800CF0321 /* reward_damage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_damage.png; path = Resources/reward_damage.png; sourceTree = "<group>"; };
+		1497201E1EEEDA8800CF0321 /* reward_life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_life.png; path = Resources/reward_life.png; sourceTree = "<group>"; };
+		1497201F1EEEDA8800CF0321 /* reward_speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_speed.png; path = Resources/reward_speed.png; sourceTree = "<group>"; };
+		149720201EEEDA9500CF0321 /* Reward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Reward.h; path = ../Reward.h; sourceTree = "<group>"; };
+		149720211EEEDAAB00CF0321 /* Reward.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Reward.cpp; sourceTree = "<group>"; };
 		14B6B2E21ED3BEC9000ED50B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = Resources/bullet.png; sourceTree = "<group>"; };
 		14B6B2E31ED3BEC9000ED50B /* enemy0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0.png; path = Resources/enemy0.png; sourceTree = "<group>"; };
 		14B6B2E51ED3BEC9000ED50B /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane.png; path = Resources/plane.png; sourceTree = "<group>"; };
@@ -165,6 +174,10 @@
 				142924D81EC41059000BCA4B /* main.cpp */,
 				14FB25AD1EC9C62100E53C35 /* Game.h */,
 				14FB25AE1EC9C62E00E53C35 /* Game.cpp */,
+				1497201A1EEEBEFD00CF0321 /* Menu.h */,
+				1497201B1EEEBF0800CF0321 /* Menu.cpp */,
+				149720201EEEDA9500CF0321 /* Reward.h */,
+				149720211EEEDAAB00CF0321 /* Reward.cpp */,
 				14FB25B61EC9D35300E53C35 /* Sprite.h */,
 				14FB25B01EC9CA6800E53C35 /* Player.h */,
 				14FB25B11EC9CA7E00E53C35 /* Player.cpp */,
@@ -241,6 +254,9 @@
 				14FA1FB01ED6816400E12981 /* plane_down2.png */,
 				14FA1FB11ED6816400E12981 /* plane_down3.png */,
 				14FA1FB21ED6816400E12981 /* plane_down4.png */,
+				1497201D1EEEDA8800CF0321 /* reward_damage.png */,
+				1497201E1EEEDA8800CF0321 /* reward_life.png */,
+				1497201F1EEEDA8800CF0321 /* reward_speed.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -302,11 +318,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149720221EEEDAAB00CF0321 /* Reward.cpp in Sources */,
 				14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */,
 				14FB25B51EC9D2BC00E53C35 /* Enemy.cpp in Sources */,
 				142924D91EC41059000BCA4B /* main.cpp in Sources */,
 				14FB25AF1EC9C62E00E53C35 /* Game.cpp in Sources */,
 				14FB25B21EC9CA7E00E53C35 /* Player.cpp in Sources */,
+				1497201C1EEEBF0800CF0321 /* Menu.cpp in Sources */,
 				14F5EEEE1ECBD48C003D4EB6 /* Enemys.cpp in Sources */,
 				14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */,
 				149720171EEEAC0E00CF0321 /* Background.cpp in Sources */,
