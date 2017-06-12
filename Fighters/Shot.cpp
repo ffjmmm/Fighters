@@ -30,12 +30,12 @@ void Shot::setSpeed(int speed) {
 
 void Shot::setPicture(int k) {
     if (k == 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/bullet.png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/bullet.png");
         rect = texture.getSize();
         shot.setTexture(texture);
     }
     if (k == -1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/bullet1.png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/bullet1.png");
         rect = texture.getSize();
         shot.setTexture(texture);
     }

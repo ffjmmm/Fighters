@@ -16,12 +16,12 @@ Game::Game() {
     mWindow.setFramerateLimit(60);
     gameTime = sf::Time::Zero;
     bossTime = sf::Time::Zero;
-    font.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/Arial Black.ttf");
-    gameMusic.openFromFile("/Users/fjm/ccpp2017/Fighters/Resources/game_music.wav");
-    gameOverMusic.openFromFile("/Users/fjm/ccpp2017/Fighters/Resources/game_over.wav");
-    enemyDownBuffer.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/enemy0_down.wav");
+    font.loadFromFile("/Users/fjm/Git/Fighters/Resources/Arial Black.ttf");
+    gameMusic.openFromFile("/Users/fjm/Git/Fighters/Resources/game_music.wav");
+    gameOverMusic.openFromFile("/Users/fjm/Git/Fighters/Resources/game_over.wav");
+    enemyDownBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/enemy0_down.wav");
     enemyDownSound.setBuffer(enemyDownBuffer);
-    playerDownBuffer.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/player_down.wav");
+    playerDownBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/player_down.wav");
     playerDownSound.setBuffer(playerDownBuffer);
 }
 
@@ -65,6 +65,7 @@ void Game::processEvents() {
 
 void Game::update(sf::Time time) {
     player.move(time);
+    background.move(time);
     if (!boss.bossComing) {
         enemy.creatEnemy(gameTime);
     }
@@ -123,6 +124,8 @@ void Game::render() {
         mWindow.display();
         return;
     }
+    mWindow.draw(background.background[0]);
+    mWindow.draw(background.background[1]);
     mWindow.draw(score.score);
     if (player.aliveCondition) mWindow.draw(player.Plane);
     for (int i = 0; i < numOfShots; i++) {
@@ -198,7 +201,7 @@ void Game::checkCrash() {
                 player.shots[j].isAlive = 0;
                 enemyDownSound.play();
                 score.updateScore(10);
-                if (score.getScore() > 30) {
+                if (score.getScore() > 100) {
                     boss.bossComing = 1;
                 }
                 break;

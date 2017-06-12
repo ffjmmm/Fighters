@@ -13,7 +13,7 @@
 using namespace std;
 
 Boss::Boss() {
-    texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/boss.png");
+    texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/boss.png");
     rect = texture.getSize();
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, 0);
@@ -30,7 +30,7 @@ Boss::Boss() {
 }
 
 void Boss::reStart() {
-    texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/boss.png");
+    texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/boss.png");
     rect = texture.getSize();
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, 0);
@@ -56,7 +56,7 @@ void Boss::move(sf::Time time) {
         return;
     }
     if (HP < 10) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/boss_hit.png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/boss_hit.png");
         rect = texture.getSize();
         Plane.setTexture(texture);
     }
@@ -108,15 +108,15 @@ void Boss::shoot(sf::Time time, Player player) {
 
 
 void Boss::down(int k) {
-    int t = 5;
-    if (k == 6*t + 1) {
+    int t = 7;
+    if (k == 6*t + 7) {
         bossTime = 0;
         bossComing = 0;
         WIN = 1;
         return;
     }
     if (k % t == 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/boss_down" + to_string(k/t+1) + ".png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/boss_down" + to_string(k/t+1) + ".png");
         Plane.setTexture(texture);
         rect = texture.getSize();
     }

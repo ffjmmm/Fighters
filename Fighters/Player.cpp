@@ -11,7 +11,7 @@
 using namespace std;
 
 Player::Player() {
-    texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/plane.png");
+    texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/plane.png");
     rect = texture.getSize();
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, windowHeight - rect.y - 10);
@@ -23,7 +23,7 @@ Player::Player() {
     moveDown = 0;
     life = 3;
     GameOver = 0;
-    shotBuffer.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/bullet.wav");
+    shotBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/bullet.wav");
     shotSound.setBuffer(shotBuffer);
     for (int i = 0; i < numOfShots; i++) shots[i].setSpeed(150);
 }
@@ -117,14 +117,14 @@ void Player::shoot(bool isPressed) {
 void Player::down(int k) {
     int t = 3;
     if (k == 4*t + 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/plane.png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/plane.png");
         Plane.setTexture(texture);
         rect = texture.getSize();
         aliveCondition = 0;
         return;
     }
     if (k % t == 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/plane_down" + to_string(k/t+1) + ".png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/plane_down" + to_string(k/t+1) + ".png");
         Plane.setTexture(texture);
         rect = texture.getSize();
     }

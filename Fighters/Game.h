@@ -16,6 +16,7 @@
 #include "Score.h"
 #include "Heart.h"
 #include "Boss.h"
+#include "Background.h"
 
 class Game {
 private:
@@ -34,6 +35,7 @@ private:
     Enemys enemy;
     Heart heart;
     Boss boss;
+    Background background;
     void processEvents();
     void update(sf::Time time);
     void render();

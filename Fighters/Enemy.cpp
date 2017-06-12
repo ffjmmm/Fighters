@@ -15,7 +15,7 @@ using namespace std;
 #define PI 3.1415926
 
 Enemy::Enemy() {
-    texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/enemy0.png");
+    texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/enemy0.png");
     rect = texture.getSize();
     enemyPlane.setTexture(texture);
     speed = 100;
@@ -36,7 +36,7 @@ void Enemy::move(sf::Time time) {
 void Enemy::down(int k) {
     int t = 3;
     if (k == 4*t + 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/enemy0.png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/enemy0.png");
         enemyPlane.setTexture(texture);
         rect = texture.getSize();
         aliveCondition = 0;
@@ -44,7 +44,7 @@ void Enemy::down(int k) {
         return;
     }
     if (k % t == 1) {
-        texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/enemy0_down" + to_string(k/t+1) + ".png");
+        texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/enemy0_down" + to_string(k/t+1) + ".png");
         enemyPlane.setTexture(texture);
         rect = texture.getSize();
     }

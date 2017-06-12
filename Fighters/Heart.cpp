@@ -11,7 +11,7 @@
 using namespace std;
 
 Heart::Heart() {
-    texture.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/heart.png");
+    texture.loadFromFile("/Users/fjm/Git/Fighters/Resources/heart.png");
     rect = texture.getSize();
     heart.setTexture(texture);
 }

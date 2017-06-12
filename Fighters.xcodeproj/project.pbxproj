@@ -23,6 +23,7 @@
 		142924FB1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
 		142924FC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
 		142924FD1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
+		149720171EEEAC0E00CF0321 /* Background.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149720161EEEAC0E00CF0321 /* Background.cpp */; };
 		14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B2E81ED3C2D2000ED50B /* Score.cpp */; };
 		14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B1A91EE63DE500ED2639 /* Boss.cpp */; };
 		14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F563DC1ECA85E9002BB1E0 /* Shot.cpp */; };
@@ -63,6 +64,10 @@
 		142924EC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
 		142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
 		142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
+		149720151EEEAC0100CF0321 /* Background.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Background.h; sourceTree = "<group>"; };
+		149720161EEEAC0E00CF0321 /* Background.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Background.cpp; sourceTree = "<group>"; };
+		149720181EEEAD4800CF0321 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background.png; path = Resources/background.png; sourceTree = "<group>"; };
+		149720191EEEB5AC00CF0321 /* background_long.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = background_long.png; path = Resources/background_long.png; sourceTree = "<group>"; };
 		14B6B2E21ED3BEC9000ED50B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = Resources/bullet.png; sourceTree = "<group>"; };
 		14B6B2E31ED3BEC9000ED50B /* enemy0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0.png; path = Resources/enemy0.png; sourceTree = "<group>"; };
 		14B6B2E51ED3BEC9000ED50B /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane.png; path = Resources/plane.png; sourceTree = "<group>"; };
@@ -163,6 +168,8 @@
 				14FB25B61EC9D35300E53C35 /* Sprite.h */,
 				14FB25B01EC9CA6800E53C35 /* Player.h */,
 				14FB25B11EC9CA7E00E53C35 /* Player.cpp */,
+				149720151EEEAC0100CF0321 /* Background.h */,
+				149720161EEEAC0E00CF0321 /* Background.cpp */,
 				14D3B1A81EE63DDA00ED2639 /* Boss.h */,
 				14D3B1A91EE63DE500ED2639 /* Boss.cpp */,
 				14FB25B31EC9D2B200E53C35 /* Enemy.h */,
@@ -204,6 +211,8 @@
 		142924FF1EC412B6000BCA4B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				149720181EEEAD4800CF0321 /* background.png */,
+				149720191EEEB5AC00CF0321 /* background_long.png */,
 				14D3B1A01EE63DC100ED2639 /* boss_down1.png */,
 				14D3B1A11EE63DC100ED2639 /* boss_down2.png */,
 				14D3B1A21EE63DC100ED2639 /* boss_down3.png */,
@@ -300,6 +309,7 @@
 				14FB25B21EC9CA7E00E53C35 /* Player.cpp in Sources */,
 				14F5EEEE1ECBD48C003D4EB6 /* Enemys.cpp in Sources */,
 				14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */,
+				149720171EEEAC0E00CF0321 /* Background.cpp in Sources */,
 				14FA1FB61ED68AD000E12981 /* Heart.cpp in Sources */,
 				14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */,
 			);

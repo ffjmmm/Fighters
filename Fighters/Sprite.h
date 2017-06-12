@@ -11,7 +11,7 @@
 
 
 #include <SFML/Graphics.hpp>
-#define windowWidth 800
+#define windowWidth 480
 #define windowHeight 600
 
 class Sprite {

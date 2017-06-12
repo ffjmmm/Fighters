@@ -12,7 +12,7 @@ using namespace std;
 
 Score::Score() {
     scoreNow = 0;
-    font.loadFromFile("/Users/fjm/ccpp2017/Fighters/Resources/Arial Black.ttf");
+    font.loadFromFile("/Users/fjm/Git/Fighters/Resources/Arial Black.ttf");
     score.setFont(font);
     score.setCharacterSize(30);
     score.setFillColor(sf::Color::White);
