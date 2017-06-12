@@ -6,10 +6,10 @@
 //  Copyright © 2017年 Jimmy Fan. All rights reserved.
 //
 
-#include <iostream>
+#include "Game.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main() {
+    Game game;
+    game.run();
     return 0;
 }

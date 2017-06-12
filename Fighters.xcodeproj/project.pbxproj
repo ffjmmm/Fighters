@@ -8,6 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		142924D91EC41059000BCA4B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 142924D81EC41059000BCA4B /* main.cpp */; };
+		142924EF1EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E01EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */; };
+		142924F01EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E11EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */; };
+		142924F11EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E21EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */; };
+		142924F21EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E31EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */; };
+		142924F31EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E41EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */; };
+		142924F41EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E51EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */; };
+		142924F51EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E61EC41184000BCA4B /* libsfml-network.2.4.2.dylib */; };
+		142924F61EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E71EC41184000BCA4B /* libsfml-network.2.4.2.dylib */; };
+		142924F71EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E81EC41184000BCA4B /* libsfml-network.2.4.2.dylib */; };
+		142924F81EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924E91EC41184000BCA4B /* libsfml-system.2.4.2.dylib */; };
+		142924F91EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EA1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */; };
+		142924FA1EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EB1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */; };
+		142924FB1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
+		142924FC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
+		142924FD1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */; };
+		14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B2E81ED3C2D2000ED50B /* Score.cpp */; };
+		14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B1A91EE63DE500ED2639 /* Boss.cpp */; };
+		14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F563DC1ECA85E9002BB1E0 /* Shot.cpp */; };
+		14F5EEEE1ECBD48C003D4EB6 /* Enemys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F5EEED1ECBD48C003D4EB6 /* Enemys.cpp */; };
+		14FA1FB61ED68AD000E12981 /* Heart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FA1FB51ED68AD000E12981 /* Heart.cpp */; };
+		14FB25AF1EC9C62E00E53C35 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FB25AE1EC9C62E00E53C35 /* Game.cpp */; };
+		14FB25B21EC9CA7E00E53C35 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FB25B11EC9CA7E00E53C35 /* Player.cpp */; };
+		14FB25B51EC9D2BC00E53C35 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FB25B41EC9D2BC00E53C35 /* Enemy.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +48,66 @@
 /* Begin PBXFileReference section */
 		142924D51EC41059000BCA4B /* Fighters */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Fighters; sourceTree = BUILT_PRODUCTS_DIR; };
 		142924D81EC41059000BCA4B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		142924E01EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-audio.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-audio.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E11EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-audio.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-audio.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E21EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-audio.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-audio.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E31EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-graphics.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E41EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-graphics.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E51EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-graphics.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-graphics.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E61EC41184000BCA4B /* libsfml-network.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-network.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E71EC41184000BCA4B /* libsfml-network.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-network.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E81EC41184000BCA4B /* libsfml-network.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-network.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-network.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924E91EC41184000BCA4B /* libsfml-system.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-system.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924EA1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-system.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924EB1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-system.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-system.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924EC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
+		142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libsfml-window.2.4.2.dylib"; path = "../SFML-2.4.2-osx-clang/lib/libsfml-window.2.4.2.dylib"; sourceTree = "<group>"; };
+		14B6B2E21ED3BEC9000ED50B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = Resources/bullet.png; sourceTree = "<group>"; };
+		14B6B2E31ED3BEC9000ED50B /* enemy0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0.png; path = Resources/enemy0.png; sourceTree = "<group>"; };
+		14B6B2E51ED3BEC9000ED50B /* plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane.png; path = Resources/plane.png; sourceTree = "<group>"; };
+		14B6B2E61ED3C1F9000ED50B /* Arial Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Arial Black.ttf"; path = "Resources/Arial Black.ttf"; sourceTree = "<group>"; };
+		14B6B2E71ED3C2C5000ED50B /* Score.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Score.h; sourceTree = "<group>"; };
+		14B6B2E81ED3C2D2000ED50B /* Score.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Score.cpp; sourceTree = "<group>"; };
+		14B6B2EA1ED3C749000ED50B /* enemy0_down1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0_down1.png; path = Resources/enemy0_down1.png; sourceTree = "<group>"; };
+		14B6B2EB1ED3C749000ED50B /* enemy0_down2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0_down2.png; path = Resources/enemy0_down2.png; sourceTree = "<group>"; };
+		14B6B2EC1ED3C749000ED50B /* enemy0_down3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0_down3.png; path = Resources/enemy0_down3.png; sourceTree = "<group>"; };
+		14B6B2ED1ED3C749000ED50B /* enemy0_down4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0_down4.png; path = Resources/enemy0_down4.png; sourceTree = "<group>"; };
+		14D3B1A01EE63DC100ED2639 /* boss_down1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down1.png; path = Resources/boss_down1.png; sourceTree = "<group>"; };
+		14D3B1A11EE63DC100ED2639 /* boss_down2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down2.png; path = Resources/boss_down2.png; sourceTree = "<group>"; };
+		14D3B1A21EE63DC100ED2639 /* boss_down3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down3.png; path = Resources/boss_down3.png; sourceTree = "<group>"; };
+		14D3B1A31EE63DC100ED2639 /* boss_down4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down4.png; path = Resources/boss_down4.png; sourceTree = "<group>"; };
+		14D3B1A41EE63DC100ED2639 /* boss_down5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down5.png; path = Resources/boss_down5.png; sourceTree = "<group>"; };
+		14D3B1A51EE63DC100ED2639 /* boss_down6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_down6.png; path = Resources/boss_down6.png; sourceTree = "<group>"; };
+		14D3B1A61EE63DC100ED2639 /* boss_hit.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss_hit.png; path = Resources/boss_hit.png; sourceTree = "<group>"; };
+		14D3B1A71EE63DC100ED2639 /* boss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss.png; path = Resources/boss.png; sourceTree = "<group>"; };
+		14D3B1A81EE63DDA00ED2639 /* Boss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
+		14D3B1A91EE63DE500ED2639 /* Boss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
+		14F563DB1ECA85D9002BB1E0 /* Shot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
+		14F563DC1ECA85E9002BB1E0 /* Shot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shot.cpp; sourceTree = "<group>"; };
+		14F5EEEC1ECBD47F003D4EB6 /* Enemys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemys.h; sourceTree = "<group>"; };
+		14F5EEED1ECBD48C003D4EB6 /* Enemys.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemys.cpp; sourceTree = "<group>"; };
+		14F8DCD31EDFB730006F3CF2 /* game_music.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = game_music.wav; path = Resources/game_music.wav; sourceTree = "<group>"; };
+		14F8DCD41EDFB8B6006F3CF2 /* enemy0_down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = enemy0_down.wav; path = Resources/enemy0_down.wav; sourceTree = "<group>"; };
+		14F8DCD61EDFBB95006F3CF2 /* bullet.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = bullet.wav; path = Resources/bullet.wav; sourceTree = "<group>"; };
+		14F8DCD81EDFBC8F006F3CF2 /* player_down.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = player_down.wav; path = Resources/player_down.wav; sourceTree = "<group>"; };
+		14F8DCD91EDFBCFC006F3CF2 /* game_over.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = game_over.wav; path = Resources/game_over.wav; sourceTree = "<group>"; };
+		14FA1FAD1ED67A3800E12981 /* bulletEnemy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bulletEnemy.png; path = Resources/bulletEnemy.png; sourceTree = "<group>"; };
+		14FA1FAE1ED67ACB00E12981 /* bullet1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet1.png; path = Resources/bullet1.png; sourceTree = "<group>"; };
+		14FA1FAF1ED6816400E12981 /* plane_down1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane_down1.png; path = Resources/plane_down1.png; sourceTree = "<group>"; };
+		14FA1FB01ED6816400E12981 /* plane_down2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane_down2.png; path = Resources/plane_down2.png; sourceTree = "<group>"; };
+		14FA1FB11ED6816400E12981 /* plane_down3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane_down3.png; path = Resources/plane_down3.png; sourceTree = "<group>"; };
+		14FA1FB21ED6816400E12981 /* plane_down4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = plane_down4.png; path = Resources/plane_down4.png; sourceTree = "<group>"; };
+		14FA1FB41ED689EE00E12981 /* Heart.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Heart.h; sourceTree = "<group>"; };
+		14FA1FB51ED68AD000E12981 /* Heart.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Heart.cpp; sourceTree = "<group>"; };
+		14FA1FB91ED6CEC500E12981 /* heart.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = heart.png; path = Resources/heart.png; sourceTree = "<group>"; };
+		14FB25AD1EC9C62100E53C35 /* Game.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		14FB25AE1EC9C62E00E53C35 /* Game.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
+		14FB25B01EC9CA6800E53C35 /* Player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		14FB25B11EC9CA7E00E53C35 /* Player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		14FB25B31EC9D2B200E53C35 /* Enemy.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		14FB25B41EC9D2BC00E53C35 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		14FB25B61EC9D35300E53C35 /* Sprite.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sprite.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +115,21 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				142924EF1EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */,
+				142924F01EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */,
+				142924F11EC41184000BCA4B /* libsfml-audio.2.4.2.dylib in Frameworks */,
+				142924F21EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */,
+				142924F31EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */,
+				142924F41EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib in Frameworks */,
+				142924F51EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */,
+				142924F61EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */,
+				142924F71EC41184000BCA4B /* libsfml-network.2.4.2.dylib in Frameworks */,
+				142924F81EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */,
+				142924F91EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */,
+				142924FA1EC41184000BCA4B /* libsfml-system.2.4.2.dylib in Frameworks */,
+				142924FB1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */,
+				142924FC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */,
+				142924FD1EC41184000BCA4B /* libsfml-window.2.4.2.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -41,8 +139,10 @@
 		142924CC1EC41059000BCA4B = {
 			isa = PBXGroup;
 			children = (
+				142924FF1EC412B6000BCA4B /* Resources */,
 				142924D71EC41059000BCA4B /* Fighters */,
 				142924D61EC41059000BCA4B /* Products */,
+				142924DF1EC41184000BCA4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +158,82 @@
 			isa = PBXGroup;
 			children = (
 				142924D81EC41059000BCA4B /* main.cpp */,
+				14FB25AD1EC9C62100E53C35 /* Game.h */,
+				14FB25AE1EC9C62E00E53C35 /* Game.cpp */,
+				14FB25B61EC9D35300E53C35 /* Sprite.h */,
+				14FB25B01EC9CA6800E53C35 /* Player.h */,
+				14FB25B11EC9CA7E00E53C35 /* Player.cpp */,
+				14D3B1A81EE63DDA00ED2639 /* Boss.h */,
+				14D3B1A91EE63DE500ED2639 /* Boss.cpp */,
+				14FB25B31EC9D2B200E53C35 /* Enemy.h */,
+				14FB25B41EC9D2BC00E53C35 /* Enemy.cpp */,
+				14F5EEEC1ECBD47F003D4EB6 /* Enemys.h */,
+				14F5EEED1ECBD48C003D4EB6 /* Enemys.cpp */,
+				14F563DB1ECA85D9002BB1E0 /* Shot.h */,
+				14F563DC1ECA85E9002BB1E0 /* Shot.cpp */,
+				14B6B2E71ED3C2C5000ED50B /* Score.h */,
+				14B6B2E81ED3C2D2000ED50B /* Score.cpp */,
+				14FA1FB41ED689EE00E12981 /* Heart.h */,
+				14FA1FB51ED68AD000E12981 /* Heart.cpp */,
 			);
 			path = Fighters;
+			sourceTree = "<group>";
+		};
+		142924DF1EC41184000BCA4B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				142924E01EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */,
+				142924E11EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */,
+				142924E21EC41184000BCA4B /* libsfml-audio.2.4.2.dylib */,
+				142924E31EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */,
+				142924E41EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */,
+				142924E51EC41184000BCA4B /* libsfml-graphics.2.4.2.dylib */,
+				142924E61EC41184000BCA4B /* libsfml-network.2.4.2.dylib */,
+				142924E71EC41184000BCA4B /* libsfml-network.2.4.2.dylib */,
+				142924E81EC41184000BCA4B /* libsfml-network.2.4.2.dylib */,
+				142924E91EC41184000BCA4B /* libsfml-system.2.4.2.dylib */,
+				142924EA1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */,
+				142924EB1EC41184000BCA4B /* libsfml-system.2.4.2.dylib */,
+				142924EC1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */,
+				142924ED1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */,
+				142924EE1EC41184000BCA4B /* libsfml-window.2.4.2.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		142924FF1EC412B6000BCA4B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				14D3B1A01EE63DC100ED2639 /* boss_down1.png */,
+				14D3B1A11EE63DC100ED2639 /* boss_down2.png */,
+				14D3B1A21EE63DC100ED2639 /* boss_down3.png */,
+				14D3B1A31EE63DC100ED2639 /* boss_down4.png */,
+				14D3B1A41EE63DC100ED2639 /* boss_down5.png */,
+				14D3B1A51EE63DC100ED2639 /* boss_down6.png */,
+				14D3B1A61EE63DC100ED2639 /* boss_hit.png */,
+				14D3B1A71EE63DC100ED2639 /* boss.png */,
+				14F8DCD91EDFBCFC006F3CF2 /* game_over.wav */,
+				14F8DCD31EDFB730006F3CF2 /* game_music.wav */,
+				14F8DCD81EDFBC8F006F3CF2 /* player_down.wav */,
+				14F8DCD41EDFB8B6006F3CF2 /* enemy0_down.wav */,
+				14F8DCD61EDFBB95006F3CF2 /* bullet.wav */,
+				14FA1FB91ED6CEC500E12981 /* heart.png */,
+				14B6B2E21ED3BEC9000ED50B /* bullet.png */,
+				14FA1FAD1ED67A3800E12981 /* bulletEnemy.png */,
+				14FA1FAE1ED67ACB00E12981 /* bullet1.png */,
+				14B6B2E31ED3BEC9000ED50B /* enemy0.png */,
+				14B6B2EA1ED3C749000ED50B /* enemy0_down1.png */,
+				14B6B2EB1ED3C749000ED50B /* enemy0_down2.png */,
+				14B6B2EC1ED3C749000ED50B /* enemy0_down3.png */,
+				14B6B2ED1ED3C749000ED50B /* enemy0_down4.png */,
+				14B6B2E61ED3C1F9000ED50B /* Arial Black.ttf */,
+				14B6B2E51ED3BEC9000ED50B /* plane.png */,
+				14FA1FAF1ED6816400E12981 /* plane_down1.png */,
+				14FA1FB01ED6816400E12981 /* plane_down2.png */,
+				14FA1FB11ED6816400E12981 /* plane_down3.png */,
+				14FA1FB21ED6816400E12981 /* plane_down4.png */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +293,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */,
+				14FB25B51EC9D2BC00E53C35 /* Enemy.cpp in Sources */,
 				142924D91EC41059000BCA4B /* main.cpp in Sources */,
+				14FB25AF1EC9C62E00E53C35 /* Game.cpp in Sources */,
+				14FB25B21EC9CA7E00E53C35 /* Player.cpp in Sources */,
+				14F5EEEE1ECBD48C003D4EB6 /* Enemys.cpp in Sources */,
+				14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */,
+				14FA1FB61ED68AD000E12981 /* Heart.cpp in Sources */,
+				14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,6 +348,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -207,6 +391,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
@@ -216,6 +402,8 @@
 		142924DD1EC41059000BCA4B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -223,6 +411,8 @@
 		142924DE1EC41059000BCA4B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				HEADER_SEARCH_PATHS = /usr/local/include;
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -246,6 +436,7 @@
 				142924DE1EC41059000BCA4B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
