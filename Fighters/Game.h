@@ -42,6 +42,7 @@ private:
     Background background;
     Reward reward;
     GameMenu gameMenu;
+    int damageUP, speedUP, lifeUP;
     int timee;
     bool pause;
     void processEvents();

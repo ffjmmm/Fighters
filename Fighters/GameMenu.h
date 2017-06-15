@@ -11,7 +11,6 @@
 
 #include <SFML/Graphics.hpp>
 #define windowWidth 480
-#define windowHeight 600
 
 class GameMenu {
 private:

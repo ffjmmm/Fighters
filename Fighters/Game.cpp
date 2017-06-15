@@ -24,7 +24,7 @@ Game::Game() {
     playerDownBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/player_down.wav");
     playerDownSound.setBuffer(playerDownBuffer);
     pause = 0;
-    timee = 1;
+    timee = 0;
     gameMenu.inMenu = 1;
 }
 
@@ -119,40 +119,76 @@ void Game::render() {
         mWindow.draw(player.menu.getDamageText());
         mWindow.draw(player.menu.getSpeedText());
         mWindow.draw(player.menu.getLifeText());
+        mWindow.draw(player.menu.getTitleText());
         mWindow.display();
         return;
     }
     if (player.GameOver) {
         gameMusic.stop();
         gameOverMusic.play();
-        sf::Text over;
+        sf::Text over,toMenu;
         over.setFont(font);
+        over.setCharacterSize(45);
         over.setString("Game Over");
-        over.setStyle(sf::Text::Bold);
-        over.setPosition((windowWidth - over.getLocalBounds().width)/2, (windowHeight - over.getLocalBounds().height)/2);
-        over.setFillColor(sf::Color::White);
+        over.setPosition((windowWidth - over.getLocalBounds().width)/2, (windowHeight - over.getLocalBounds().height)/2 - 50);
         mWindow.draw(over);
-        over.setString("Enter to RESTART");
-        over.setPosition((windowWidth - over.getLocalBounds().width)/2, (windowHeight - over.getLocalBounds().height)/2 + 100);
-        mWindow.draw(over);
+        toMenu.setFont(font);
+        toMenu.setString("ENTER to Menu");
+        toMenu.setCharacterSize(25);
+        toMenu.setPosition((windowWidth - toMenu.getLocalBounds().width)/2, (windowHeight - toMenu.getLocalBounds().height)/2 + 50);
+        mWindow.draw(toMenu);
         mWindow.display();
         return;
     }
     if (boss.WIN) {
-        sf::Text win;
+        sf::Text win,toMenu;
         win.setFont(font);
         win.setString("YOU WIN!!");
-        win.setStyle(sf::Text::Bold);
-        win.setPosition((windowWidth - win.getLocalBounds().width)/2, (windowHeight - win.getLocalBounds().height)/2);
-        win.setFillColor(sf::Color::White);
+        win.setCharacterSize(45);
+        win.setPosition((windowWidth - win.getLocalBounds().width)/2, (windowHeight - win.getLocalBounds().height)/2 - 50);
         mWindow.draw(win);
-        win.setString("Enter to RESTART");
-        win.setPosition((windowWidth - win.getLocalBounds().width)/2, (windowHeight - win.getLocalBounds().height)/2 + 100);
-        mWindow.draw(win);
+        toMenu.setFont(font);
+        toMenu.setString("ENTER to Menu");
+        toMenu.setCharacterSize(25);
+        toMenu.setPosition((windowWidth - toMenu.getLocalBounds().width)/2, (windowHeight - toMenu.getLocalBounds().height)/2 + 50);
+        mWindow.draw(toMenu);
         mWindow.display();
         return;
     }
     mWindow.draw(score.score);
+    if (damageUP) {
+        damageUP --;
+        sf::Text damageUp;
+        damageUp.setFont(font);
+        damageUp.setCharacterSize(20);
+        damageUp.setString("damage up");
+        damageUp.setFillColor(sf::Color::Black);
+        sf::Vector2f posPlayer = player.Plane.getPosition();
+        damageUp.setPosition(posPlayer.x + player.rect.x / 2 - damageUp.getLocalBounds().width / 2, posPlayer.y - 50);
+        mWindow.draw(damageUp);
+    }
+    if (speedUP) {
+        speedUP --;
+        sf::Text speedUp;
+        speedUp.setFont(font);
+        speedUp.setCharacterSize(20);
+        speedUp.setString("speed up");
+        speedUp.setFillColor(sf::Color::Black);
+        sf::Vector2f posPlayer = player.Plane.getPosition();
+        speedUp.setPosition(posPlayer.x + player.rect.x / 2 - speedUp.getLocalBounds().width / 2, posPlayer.y - 50);
+        mWindow.draw(speedUp);
+    }
+    if (lifeUP) {
+        lifeUP --;
+        sf::Text lifeUp;
+        lifeUp.setFont(font);
+        lifeUp.setCharacterSize(20);
+        lifeUp.setString("life up");
+        lifeUp.setFillColor(sf::Color::Black);
+        sf::Vector2f posPlayer = player.Plane.getPosition();
+        lifeUp.setPosition(posPlayer.x + player.rect.x / 2 - lifeUp.getLocalBounds().width / 2, posPlayer.y - 50);
+        mWindow.draw(lifeUp);
+    }
     if (player.aliveCondition) mWindow.draw(player.Plane);
     if (reward.alive) mWindow.draw(reward.reward);
     for (int i = 0; i < numOfShots; i++) {
@@ -279,9 +315,18 @@ void Game::checkCrash() {
         sf::Vector2f posReward = reward.reward.getPosition();
         if (isCollsion(posPlayer.x, posPlayer.y, player.rect.x, player.rect.y, posReward.x, posReward.y, reward.rect.x, reward.rect.y)) {
             reward.alive = 0;
-            if (reward.getKind() == 0) player.damage ++;
-            if (reward.getKind() == 1) player.life ++;
-            if (reward.getKind() == 2) player.speed += 50;
+            if (reward.getKind() == 0) {
+                player.damage ++;
+                damageUP = 10;
+            }
+            if (reward.getKind() == 1) {
+                player.life ++;
+                lifeUP = 10;
+            }
+            if (reward.getKind() == 2) {
+                player.speed += 50;
+                speedUP = 10;
+            }
         }
     }
     if (player.aliveCondition != 1) return;

@@ -71,6 +71,6 @@ sf::Text GameMenu::getQuitText() {
 }
 
 sf::Sprite GameMenu::getSelector() {
-    selector.setPosition(60, (index+1) * 100);
+    selector.setPosition(60, (index+1) * 100 + 5);
     return selector;
 }

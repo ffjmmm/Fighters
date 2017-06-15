@@ -13,20 +13,22 @@ using namespace std;
 Menu::Menu() {
     font.loadFromFile("/Users/fjm/Git/Fighters/Resources/Arial Black.ttf");
     Damage.setFont(font);
-    Damage.setStyle(sf::Text::Bold);
     Speed.setFont(font);
-    Speed.setStyle(sf::Text::Bold);
     Life.setFont(font);
-    Life.setStyle(sf::Text::Bold);
+    Title.setFont(font);
+    Title.setString("Ability");
+    Title.setCharacterSize(40);
+    Title.setPosition((windowWidth - Title.getLocalBounds().width) / 2, 50);
+    Damage.setPosition(120, 150);
+    Speed.setPosition(120, 220);
+    Life.setPosition(120, 290);
+
 }
 
 void Menu::setData(int damage, int speed, int life) {
-    Damage.setString("Damamge:    " + to_string(damage));
-    Speed.setString( "Speed:          " + to_string(speed/50));
-    Life.setString(  "Life:              " + to_string(life));
-    Damage.setPosition(50, 100);
-    Speed.setPosition(50, 200);
-    Life.setPosition(50, 300);
+    Damage.setString("Damamge:  " + to_string(damage));
+    Speed.setString( "Speed:        " + to_string(speed/50));
+    Life.setString(  "Life:            " + to_string(life));
 }
 
 sf::Text Menu::getDamageText() {
@@ -39,4 +41,8 @@ sf::Text Menu::getSpeedText() {
 
 sf::Text Menu::getLifeText() {
     return Life;
+}
+
+sf::Text Menu::getTitleText() {
+    return Title;
 }

@@ -10,6 +10,7 @@
 #define Menu_h
 
 #include <SFML/Graphics.hpp>
+#define windowWidth 480
 
 class Menu {
 private:
@@ -17,12 +18,14 @@ private:
     sf::Text Damage;
     sf::Text Speed;
     sf::Text Life;
+    sf::Text Title;
 public:
     Menu();
     void setData(int damage, int speed, int life);
     sf::Text getDamageText();
     sf::Text getSpeedText();
     sf::Text getLifeText();
+    sf::Text getTitleText();
 };
 
 #endif /* Menu_h */
