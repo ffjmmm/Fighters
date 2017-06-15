@@ -28,6 +28,7 @@ public:
     Shot shots[numOfShots];
     Player();
     Menu menu;
+    int inviolable;
     bool GameOver;
     void setMove(sf::Keyboard::Key key, bool isPressed);
     void move(sf::Time time);

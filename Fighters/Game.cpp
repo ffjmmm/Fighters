@@ -189,7 +189,10 @@ void Game::render() {
         lifeUp.setPosition(posPlayer.x + player.rect.x / 2 - lifeUp.getLocalBounds().width / 2, posPlayer.y - 50);
         mWindow.draw(lifeUp);
     }
-    if (player.aliveCondition) mWindow.draw(player.Plane);
+    if (player.aliveCondition) {
+        if ((player.inviolable && (player.inviolable/8) % 2) || !player.inviolable) mWindow.draw(player.Plane);
+        if (player.inviolable) player.inviolable --;
+    }
     if (reward.alive) mWindow.draw(reward.reward);
     for (int i = 0; i < numOfShots; i++) {
         if (player.shots[i].isAlive) {
@@ -329,6 +332,7 @@ void Game::checkCrash() {
             }
         }
     }
+    if (player.inviolable) return;
     if (player.aliveCondition != 1) return;
     for (int i = 0; i < enemy.numOfEnemys; i++) {
         if (enemy.enemys[i].aliveCondition != 1) continue;

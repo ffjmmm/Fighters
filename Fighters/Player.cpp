@@ -27,6 +27,7 @@ Player::Player() {
     shotBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/bullet.wav");
     shotSound.setBuffer(shotBuffer);
     for (int i = 0; i < numOfShots; i++) shots[i].setSpeed(150);
+    inviolable = 0;
 }
 
 void Player::reStart() {
@@ -41,6 +42,7 @@ void Player::reStart() {
     damage = 1;
     GameOver = 0;
     for (int i = 0; i < numOfShots; i++) shots[i].isAlive = 0;
+    inviolable = 0;
 }
 
 void Player::setMove(sf::Keyboard::Key key, bool isPressed) {
@@ -69,6 +71,7 @@ void Player::move(sf::Time time) {
         if (life) {
             Plane.setPosition((windowWidth - rect.x)/2, windowHeight - rect.y - 10);
             aliveCondition = 1;
+            inviolable = 120;
             return;
         }
         else {
