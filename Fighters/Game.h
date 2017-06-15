@@ -18,7 +18,9 @@
 #include "Boss.h"
 #include "Reward.h"
 #include "Background.h"
+#include "GameMenu.h"
 #define rewardTimeInterval 8000
+#define scoreBossComing 200
 
 class Game {
 private:
@@ -39,6 +41,7 @@ private:
     Boss boss;
     Background background;
     Reward reward;
+    GameMenu gameMenu;
     int timee;
     bool pause;
     void processEvents();

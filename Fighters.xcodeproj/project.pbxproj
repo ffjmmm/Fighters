@@ -28,6 +28,7 @@
 		149720221EEEDAAB00CF0321 /* Reward.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 149720211EEEDAAB00CF0321 /* Reward.cpp */; };
 		14B6B2E91ED3C2D2000ED50B /* Score.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14B6B2E81ED3C2D2000ED50B /* Score.cpp */; };
 		14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14D3B1A91EE63DE500ED2639 /* Boss.cpp */; };
+		14E745A71EF20BE2005BDC7B /* GameMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14E745A61EF20BE2005BDC7B /* GameMenu.cpp */; };
 		14F563DD1ECA85E9002BB1E0 /* Shot.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F563DC1ECA85E9002BB1E0 /* Shot.cpp */; };
 		14F5EEEE1ECBD48C003D4EB6 /* Enemys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14F5EEED1ECBD48C003D4EB6 /* Enemys.cpp */; };
 		14FA1FB61ED68AD000E12981 /* Heart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14FA1FB51ED68AD000E12981 /* Heart.cpp */; };
@@ -97,6 +98,9 @@
 		14D3B1A71EE63DC100ED2639 /* boss.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = boss.png; path = Resources/boss.png; sourceTree = "<group>"; };
 		14D3B1A81EE63DDA00ED2639 /* Boss.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Boss.h; sourceTree = "<group>"; };
 		14D3B1A91EE63DE500ED2639 /* Boss.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Boss.cpp; sourceTree = "<group>"; };
+		14E745A51EF20BD6005BDC7B /* GameMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMenu.h; sourceTree = "<group>"; };
+		14E745A61EF20BE2005BDC7B /* GameMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMenu.cpp; sourceTree = "<group>"; };
+		14E745A81EF21745005BDC7B /* selector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selector.png; path = Resources/selector.png; sourceTree = "<group>"; };
 		14F563DB1ECA85D9002BB1E0 /* Shot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
 		14F563DC1ECA85E9002BB1E0 /* Shot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shot.cpp; sourceTree = "<group>"; };
 		14F5EEEC1ECBD47F003D4EB6 /* Enemys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemys.h; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 				142924D81EC41059000BCA4B /* main.cpp */,
 				14FB25AD1EC9C62100E53C35 /* Game.h */,
 				14FB25AE1EC9C62E00E53C35 /* Game.cpp */,
+				14E745A51EF20BD6005BDC7B /* GameMenu.h */,
+				14E745A61EF20BE2005BDC7B /* GameMenu.cpp */,
 				1497201A1EEEBEFD00CF0321 /* Menu.h */,
 				1497201B1EEEBF0800CF0321 /* Menu.cpp */,
 				149720201EEEDA9500CF0321 /* Reward.h */,
@@ -249,6 +255,7 @@
 				14B6B2EC1ED3C749000ED50B /* enemy0_down3.png */,
 				14B6B2ED1ED3C749000ED50B /* enemy0_down4.png */,
 				14B6B2E61ED3C1F9000ED50B /* Arial Black.ttf */,
+				14E745A81EF21745005BDC7B /* selector.png */,
 				14B6B2E51ED3BEC9000ED50B /* plane.png */,
 				14FA1FAF1ED6816400E12981 /* plane_down1.png */,
 				14FA1FB01ED6816400E12981 /* plane_down2.png */,
@@ -320,6 +327,7 @@
 			files = (
 				149720221EEEDAAB00CF0321 /* Reward.cpp in Sources */,
 				14D3B1AA1EE63DE500ED2639 /* Boss.cpp in Sources */,
+				14E745A71EF20BE2005BDC7B /* GameMenu.cpp in Sources */,
 				14FB25B51EC9D2BC00E53C35 /* Enemy.cpp in Sources */,
 				142924D91EC41059000BCA4B /* main.cpp in Sources */,
 				14FB25AF1EC9C62E00E53C35 /* Game.cpp in Sources */,

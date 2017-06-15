@@ -25,6 +25,7 @@ Game::Game() {
     playerDownSound.setBuffer(playerDownBuffer);
     pause = 0;
     timee = 1;
+    gameMenu.inMenu = 1;
 }
 
 void Game::run() {
@@ -37,13 +38,13 @@ void Game::run() {
     while (mWindow.isOpen()) {
         processEvents();
         dTime = clock.getElapsedTime();
-        if (!pause) gameTime += dTime;
-        if (boss.bossTime && !pause) bossTime += dTime;
+        if (!pause && !boss.WIN && !player.GameOver && !gameMenu.inMenu) gameTime += dTime;
+        if (boss.bossTime) bossTime += dTime;
         time += clock.restart();
         while (time > Time) {
             time -= Time;
             processEvents();
-            if (!player.GameOver && !boss.WIN && !pause) update(Time);
+            update(Time);
         }
         render();
     }
@@ -66,8 +67,9 @@ void Game::processEvents() {
 }
 
 void Game::update(sf::Time time) {
-    player.move(time);
     background.move(time);
+    if (boss.WIN || player.GameOver || pause) return;
+    player.move(time);
     if (reward.alive) reward.move(time);
     if (!boss.bossComing) {
         enemy.creatEnemy(gameTime);
@@ -101,6 +103,17 @@ void Game::update(sf::Time time) {
 
 void Game::render() {
     mWindow.clear();
+    mWindow.draw(background.background[0]);
+    mWindow.draw(background.background[1]);
+    if (gameMenu.inMenu) {
+        mWindow.draw(gameMenu.getTitleText());
+        mWindow.draw(gameMenu.getSelector());
+        mWindow.draw(gameMenu.getStartText());
+        mWindow.draw(gameMenu.getRankText());
+        mWindow.draw(gameMenu.getQuitText());
+        mWindow.display();
+        return;
+    }
     if (pause) {
         player.menu.setData(player.damage, player.speed, player.life);
         mWindow.draw(player.menu.getDamageText());
@@ -139,8 +152,6 @@ void Game::render() {
         mWindow.display();
         return;
     }
-    mWindow.draw(background.background[0]);
-    mWindow.draw(background.background[1]);
     mWindow.draw(score.score);
     if (player.aliveCondition) mWindow.draw(player.Plane);
     if (reward.alive) mWindow.draw(reward.reward);
@@ -183,9 +194,22 @@ void Game::reStart() {
     boss.reStart();
     gameMusic.play();
     timee = 1;
+    pause = 0;
+    gameMenu.inMenu = 1;
 }
 
 void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed) {
+    if (gameMenu.inMenu) {
+        if (key == sf::Keyboard::Up || key == sf::Keyboard::Down || key == sf::Keyboard::Return) {
+            if (isPressed) {
+                int k = gameMenu.setEvent(key);
+                if (k == 1) gameMenu.inMenu = 0;
+                if (k == 2) {}//输出排行榜
+                if (k == 3) mWindow.close();
+            }
+        }
+        return;
+    }
     if (key == sf::Keyboard::Up || key == sf::Keyboard::Down || key == sf::Keyboard::Left || key == sf::Keyboard::Right) {
         player.setMove(key,isPressed);
     }
@@ -198,7 +222,7 @@ void Game::handlePlayerInput(sf::Keyboard::Key key, bool isPressed) {
         }
     }
     if (key == sf::Keyboard::Tab) {
-        pause = isPressed;
+        if (isPressed) pause = !pause;
     }
 }
 
@@ -225,7 +249,7 @@ void Game::checkCrash() {
                     score.updateScore(10);
                 }
                 player.shots[j].isAlive = 0;
-                if (score.getScore() > 200) {
+                if (score.getScore() > scoreBossComing) {
                     boss.bossComing = 1;
                 }
                 break;

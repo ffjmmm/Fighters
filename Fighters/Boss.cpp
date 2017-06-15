@@ -18,7 +18,7 @@ Boss::Boss() {
     Plane.setTexture(texture);
     Plane.setPosition((windowWidth - rect.x)/2, 0);
     speed = 150;
-    HP = 40;
+    HP = 30;
     aliveCondition = 1;
     stay = 0;
     bossTime = 0;
