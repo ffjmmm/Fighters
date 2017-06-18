@@ -76,7 +76,6 @@
 		1497201D1EEEDA8800CF0321 /* reward_damage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_damage.png; path = Resources/reward_damage.png; sourceTree = "<group>"; };
 		1497201E1EEEDA8800CF0321 /* reward_life.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_life.png; path = Resources/reward_life.png; sourceTree = "<group>"; };
 		1497201F1EEEDA8800CF0321 /* reward_speed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = reward_speed.png; path = Resources/reward_speed.png; sourceTree = "<group>"; };
-		149720201EEEDA9500CF0321 /* Reward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Reward.h; path = ../Reward.h; sourceTree = "<group>"; };
 		149720211EEEDAAB00CF0321 /* Reward.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Reward.cpp; sourceTree = "<group>"; };
 		14B6B2E21ED3BEC9000ED50B /* bullet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bullet.png; path = Resources/bullet.png; sourceTree = "<group>"; };
 		14B6B2E31ED3BEC9000ED50B /* enemy0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = enemy0.png; path = Resources/enemy0.png; sourceTree = "<group>"; };
@@ -101,6 +100,7 @@
 		14E745A51EF20BD6005BDC7B /* GameMenu.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameMenu.h; sourceTree = "<group>"; };
 		14E745A61EF20BE2005BDC7B /* GameMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameMenu.cpp; sourceTree = "<group>"; };
 		14E745A81EF21745005BDC7B /* selector.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = selector.png; path = Resources/selector.png; sourceTree = "<group>"; };
+		14E9EEF11EF65DA200610949 /* Reward.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Reward.h; sourceTree = "<group>"; };
 		14F563DB1ECA85D9002BB1E0 /* Shot.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shot.h; sourceTree = "<group>"; };
 		14F563DC1ECA85E9002BB1E0 /* Shot.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Shot.cpp; sourceTree = "<group>"; };
 		14F5EEEC1ECBD47F003D4EB6 /* Enemys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Enemys.h; sourceTree = "<group>"; };
@@ -182,7 +182,7 @@
 				14E745A61EF20BE2005BDC7B /* GameMenu.cpp */,
 				1497201A1EEEBEFD00CF0321 /* Menu.h */,
 				1497201B1EEEBF0800CF0321 /* Menu.cpp */,
-				149720201EEEDA9500CF0321 /* Reward.h */,
+				14E9EEF11EF65DA200610949 /* Reward.h */,
 				149720211EEEDAAB00CF0321 /* Reward.cpp */,
 				14FB25B61EC9D35300E53C35 /* Sprite.h */,
 				14FB25B01EC9CA6800E53C35 /* Player.h */,

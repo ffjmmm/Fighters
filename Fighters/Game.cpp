@@ -24,7 +24,7 @@ Game::Game() {
     playerDownBuffer.loadFromFile("/Users/fjm/Git/Fighters/Resources/player_down.wav");
     playerDownSound.setBuffer(playerDownBuffer);
     pause = 0;
-    timee = 0;
+    timee = 1;
     gameMenu.inMenu = 1;
 }
 

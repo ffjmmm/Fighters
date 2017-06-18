@@ -12,7 +12,7 @@
 #include "Enemy.h"
 #define N 20
 
-class Enemys: public Enemy {
+class Enemys {
 private:
     int timeInterval;
     int timee;

@@ -34,7 +34,7 @@ void Enemys::creatEnemy(sf::Time totTime) {
             if (!enemys[i].aliveCondition) {
                 enemys[i].aliveCondition = 1;
                 enemys[i].HP = 2;
-                int x = rand() % (windowWidth - rect.x);
+                int x = rand() % (windowWidth - enemys[i].rect.x);
                 enemys[i].enemyPlane.setPosition(x, 0);
                 break;
             }
